@@ -11,7 +11,7 @@ extern "C" {
 typedef struct UACIpcWorkMemory UACIpcWorkMemory;
 typedef struct UACRequestData UACRequestData;
 typedef struct UACSampleBufInfo UACSampleBufInfo;
-typedef struct UACIsoDesc UACISODesc;
+typedef struct UACISODesc UACISODesc;
 
 typedef enum UACError {
     UAC_ERROR_IPC_POOL_UNINITIALIZED = -1638452,
@@ -80,7 +80,7 @@ WUT_CHECK_OFFSET(UACSampleBufInfo, 0x00, frameSlipMs);
 WUT_CHECK_OFFSET(UACSampleBufInfo, 0x02, sizeBytes);
 WUT_CHECK_SIZE(UACSampleBufInfo, 0x04);
 
-struct UACIsoDesc {
+struct UACISODesc {
     //! May just be padding, seem to always be zero
     WUT_UNKNOWN_BYTES(0x20);
     void* sampleBufs[0x08];
