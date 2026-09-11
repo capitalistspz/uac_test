@@ -80,7 +80,7 @@ int main() {
             cz::os_reportln("Failed to open wav: {}", simple_wav_strerrorname(error));
         }
         else {
-            const auto bytesWritten = simple_wav_wr_write_sample_bytes(wav, sampleBuffer.data(), sampleBuffer.size(), &error);
+            const auto bytesWritten = simple_wav_wr_write_sample_bytes(wav, sampleBuffer.data(), sampleBuffer.size() * sizeof(int16_t), &error);
 
             if (error)
                 cz::os_reportln("Error writing WAV file: {}", simple_wav_strerrorname(error));
