@@ -131,7 +131,7 @@ UACError UACOpen(UACChannel channel,
 UACError UACClose(UACChannel channel);
 
 /**
- * Get 16-bit big-endian PCM samples at 16kHz sample rate
+ * Get 16-bit little-endian PCM samples at 16kHz sample rate
  * \param channel target GamePad
  * \param event signalled when audio is retrieved
  * \param [out] outDesc pointer to desc to be allocated by UACGetAudio
